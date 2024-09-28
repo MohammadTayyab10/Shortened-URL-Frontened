@@ -1,0 +1,125 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent);
+    z-index: 0;
+}
+
+h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-group, .result-group {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"]:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.result-group {
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+}
